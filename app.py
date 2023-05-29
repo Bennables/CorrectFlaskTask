@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+#this prob doesn't do anything
 with app.app_context():
     db.create_all()
 
@@ -24,7 +25,7 @@ class Todo(db.Model):
         db.create_all()
     
 
-@app.route('/')
+@app.route('/', methods = ['POST', 'GET'])
 def index():
     return render_template('index.html')
 
