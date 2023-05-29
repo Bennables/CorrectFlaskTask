@@ -1,4 +1,7 @@
 body{
     margin:100px;
-    font-family:sans-serif
+    font-family:sans-serif;
+}
+td,th {
+    border: solid 2px lightgrey;
 }
